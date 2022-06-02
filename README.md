@@ -8,7 +8,7 @@ This repo hold the info setup proper _Web Dev Setup_ on :
 This repo also covers tips to config WSL, Docker & so.
 
 ## Tools
-- Terminal tweaks
+- [Terminal tweaks](#terminal-tweaks)
 - IDE / Editor
 - SQL clients
 
@@ -24,7 +24,6 @@ In my view, an IDE / Editor should support:
 - Extending functionality - by means adding more `plugins` & `extensions`
 - Increasing productivity - by easing the debugging , automating repeated tasks
 - Balancing the life -   by not killing the OS with memory hungry
-
 
 |IDE/Editor |  Active| License| Plugins| Learning curve| Config effort|
 |--|--|--|--|--|--|
