@@ -56,30 +56,28 @@ VS Code generally called as `vscode` is great editor from Microsoft and loved by
 
 #### Atom
 
+ATOM is another great editor and favorite of most developers. This great `hackable` editor is from GitHub and the tool comes with lot of out-of-box configs for GitHub & Git integrations.
 
-
+##### GitHub connectivity
 In case you encounter errors connecting GitHub, ensure `%userprofile%\.ssh` folder on  has the following all 3 files with right permission:
 `id_rsa`, `id_rsa.pub` & `known_hosts`
 
 
 
+##### Multi Instances
+**Running different flavor(version) as another instance** Sometime you may need to run multi instances of ATOM or it's different flavor with it's own profile & settings. To acheive this on Windows modify the `<ATOM_FLAVOR>.cmd` file located at  `%USERPROFILE%\AppData\Local\<ATOM_FLAVOR>\bin\`:
 
-In case if you prefer to run multi instances of ATOM editor with it's own profile & settings
+_Sample content :_
 
-On Windows modify the `   atom-nightly.cmd` file :
+```
+  @echo off
+  set "ATOM_HOME=%USERPROFILE%\AppData\Roaming\<ATOM_FLAVOR>"
+  "%~dp0\..\app-1.63.0-nightly1\resources\cli\atom.cmd" %*
+```
 
-*atom-nightly.cmd* :
-
-`
-@echo off
-set "ATOM_HOME=C:\Users\kmuthuvel\AppData\Roaming\AtomNightly"
-"%~dp0\..\app-1.63.0-nightly1\resources\cli\atom.cmd" %*
-C:\Users\kmuthuvel\AppData\Local\atom-nightly\bin>atom-nightly.cmd
-`
-
-
-
-
+Run ATOM_FLAVOR from `cmd` terminal by:
+  - `cd  %USERPROFILE%\AppData\Local\<ATOM_FLAVOR\bin>`  _# go to the ATOM_FLAVOR bin  dir_
+  - `<ATOM_FLAVOR>.cmd`                                  _# execute the ATOM_FLAVOR bin_
 
 
 
