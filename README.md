@@ -84,7 +84,7 @@ _Sample content :_
   "%~dp0\..\app-1.63.0-nightly1\resources\cli\atom.cmd" %*
 ```
 
-Run ATOM_FLAVOR from `cmd` terminal by:
+Run `ATOM_FLAVOR` from `cmd` terminal by:
   - `cd  %USERPROFILE%\AppData\Local\<ATOM_FLAVOR\bin>`  _# go to the ATOM_FLAVOR bin  dir_
   - `<ATOM_FLAVOR>.cmd`                                  _# execute the ATOM_FLAVOR bin_
 
