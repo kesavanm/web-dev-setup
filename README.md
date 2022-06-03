@@ -56,12 +56,21 @@ VS Code generally called as `vscode` is great editor from Microsoft and loved by
 
 #### Atom
 
-ATOM is another great editor and favorite of most developers. This great `hackable` editor is from GitHub and the tool comes with lot of out-of-box configs for GitHub & Git integrations.
+ATOM is another great editor and favorite of most developers. This great `hackable` editor is from GitHub and the tool comes with lot of out-of-box configs for GitHub & Git integrations. This repo itself built using ATOM editor :)
 
 ##### GitHub connectivity
 In case you encounter errors connecting GitHub, ensure `%userprofile%\.ssh` folder on  has the following all 3 files with right permission:
 `id_rsa`, `id_rsa.pub` & `known_hosts`
 
+##### Atom.io connectivity
+When attempt to install plugins/themes, if you encounter errors related to `SELF_SIGNED_CERT_IN_CHAIN`, try:
+
+`File -> Settings -> init.coffee`
+```
+ssl=false
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0
+```
+You may need to restart the Network as well ATOM editor itself
 
 
 ##### Multi Instances
