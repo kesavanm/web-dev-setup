@@ -18,6 +18,8 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0
 ```
 You may need to restart the Network as well ATOM editor itself
 
+Also try executing `apm config set strict-ssl false` on `cmd` terminal when ATOM is running!
+
 
 ##### Multi Instances
 **Running different flavor(version) as another instance** Sometime you may need to run multi instances of ATOM or it's different flavor with it's own profile & settings. To acheive this on Windows modify the `<ATOM_FLAVOR>.cmd` file located at  `%USERPROFILE%\AppData\Local\<ATOM_FLAVOR>\bin\`:
@@ -38,9 +40,9 @@ Run `ATOM_FLAVOR` from `cmd` terminal by:
 
 #### Recommended plugins
 
-These plugins recommended for web development focused on PHP environment.
+These packages(plugins) recommended for web development focused on PHP environment.
 
-Plugin| Source |Author| Notes|
+Package| Source |Author| Notes|
 --|--|--|--|
 [ide-php](atom/ide-php)|`atom/ide-php`|atom|--|
 [atom-ide-ui](facebook-atom/atom-ide-ui)|`facebook-atom/atom-ide-ui`|facebook-atom|
@@ -50,7 +52,38 @@ Plugin| Source |Author| Notes|
 [atom-html-preview](harmsk/atom-html-preview)|`harmsk/atom-html-preview`|harmsk|
 
 
+#### xDebugging
+
+Install the following packages
+
+Package| Source |Author| Notes|
+--|--|--|--|
+[atom-debug-ui](cchamplin/atom-debug-ui)|`cchamplin/atom-debug-ui`|cchamplin|
+[php-debug](gwomacks/php-debug)|`gwomacks/php-debug`|gwomacks|
+
+
+PathMapping
+Refer the below for `config.cson`
 
 
 
-#### Enabling xDebugging
+```json
+"php-debug":
+  server:
+    keepAlive: true
+    protocolDebugging: true
+    redirectStderr: true
+    redirectStdout: true
+    serverAddress: "de-web.local"
+    serverPort: 9003
+  showWelcome: false
+  xdebug:
+    pathMaps: "[{\"remotePath\":\"/mnt/c/Users/kmuthuvel/workspace/affleck\",\"localPath\":\"C:/Users/kmuthuvel/workspace/affleck\"}]"
+
+```
+
+##### Mapping example
+![screenshot to demonstrate the mapping ](atom_php-debug.png)
+
+##### Debugging
+![screenshot to demonstrate the mapping ](atom_php-xdebugging.png)
