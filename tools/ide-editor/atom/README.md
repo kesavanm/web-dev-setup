@@ -67,7 +67,7 @@ Refer the below for `config.cson`
 
 
 
-```json
+```javascript
 "php-debug":
   server:
     keepAlive: true
