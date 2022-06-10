@@ -2,7 +2,9 @@
 
 #### Themes & Fonts
 
-- **Theme** - I always recommend `solarized`(dark mode) theme wherever applicable
+- **Theme** - I always recommend `solarized`(dark mode) theme wherever applicable.
+ - Try install [solarized_dark.reg](https://github.com/altercation/solarized/blob/master/putty-colors-solarized/solarized_dark.reg). If there's no admin right on Windows, exeute this a normal user: `reg import solarized_dark.reg`. PuTTY will be loaded with the theme.
+
 - **Fonts** - The following two fonts are choice which appears more modern as well eye-candy.
     - DroidSansMono Nerd Font
     - DejaVu Sans Mono for Powerline
@@ -15,7 +17,6 @@
 ##### solarized (dark) theme
 ![screenshot to demonstrate the mapping ](putty-solarized-dark-theme.png)
 ![screenshot to demonstrate the mapping ](putty-solarized-dark-theme2.png)
-
 
 
 #### Friendly terminals
