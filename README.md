@@ -23,10 +23,11 @@ This repo also covers tips to config WSL, Docker & so.
 |4|SSH dir|`%userprofile%\.ssh`|`$HOME/.ssh`|`id.rsa`, `id_rs.pub` & `known_hosts`|
 |5|temp files|`%temp%`|`/tmp/`|Temp dir used by OS / Servers|
 
-### Terminal tweaks
-- Terminus
-- Git Bash
-- WSL terminal
+### Terminals
+- `PuTTY` - every developers first & must have SSH client to connect to remote server
+- `Git Bash` - If there's Git flow on your work, Git bash is life saver. Comes with basic Gnu utilites making you feel in right enviroment. Also used to execute Windows native commands as well as to connect to `dockers`
+- `WSL terminal` - This gives access to the WSL where te project most likely lives.
+- `Tabby` - Earlier called as `Terminus` , a modern console which can replace all the above. This tabbed terminal let you have as many terminals as need. It can connect to remote SSH, WSL, PowerShell, Command Prompt,Git Bash. All-in-all terminals tool and your swiss-knife! Since this is built on `Electron`, yes this is bit memory hungry.Ready to feed him some gigs
 
 ### IDEs / Editors
 Choosing and Sticking with an IDE is hard. In fact choosing IDE vs Editor itself is a war. But getting the job done is ultimate goal. There's no perfect IDE/Editor. Every tool has it's own pros and cons.
