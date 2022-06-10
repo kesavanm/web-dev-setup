@@ -65,7 +65,7 @@ Package| Source |Author| Notes|
 PathMapping
 Refer the below for `config.cson`
 
-
+The project actually running inside the `WSL` and the project `workspace` mounted on Windows
 
 ```javascript
 "php-debug":
@@ -74,11 +74,11 @@ Refer the below for `config.cson`
     protocolDebugging: true
     redirectStderr: true
     redirectStdout: true
-    serverAddress: "de-web.local"
+    serverAddress: "project.local"
     serverPort: 9003
   showWelcome: false
   xdebug:
-    pathMaps: "[{\"remotePath\":\"/mnt/c/Users/kmuthuvel/workspace/affleck\",\"localPath\":\"C:/Users/kmuthuvel/workspace/affleck\"}]"
+    pathMaps: "[{\"remotePath\":\"/mnt/c/Users/kmuthuvel/workspace/project\",\"localPath\":\"C:/Users/kmuthuvel/workspace/project\"}]"
 
 ```
 
