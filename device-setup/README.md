@@ -31,6 +31,11 @@ sudo a2enmod headers rewrite ssl
  ALTER USER 'kesavan'@'%' IDENTIFIED WITH mysql_native_password BY 'password';    -- Query OK, 0 rows affected (0.01 sec)
 ```
 
+**Losing connectivity Solution**
+
+Losing net connection on WSL2 when connected with VPN? It's an known issue : DNS server coming from vpn network is not reflected in WSL · Issue #1350 · microsoft/WSL . Fix - https://superuser.com/a/1666368/677650
+
+
 ```bash
 # fix for error: chmod on /mnt/c/Users/***/.git/config.lock failed: Operation not permitted
 sudo umount /mnt/c
@@ -69,7 +74,7 @@ sudo mount -t drvfs C: /mnt/c -o metadata
 - [ ] FZF
 
 ## Fonts & UI
-- [ ] [solarized_dark.reg](https://github.com/altercation/solarized/blob/master/putty-colors-solarized/solarized_dark.reg)
+- [ ] [solarized_dark.reg](https://github.com/altercation/solarized/blob/master/putty-colors-solarized/solarized_dark.reg) for PuTTY - May this help without Admin right: `reg import solarized_dark.reg`
 - [ ] [DejaVu Sans Mono Nerd Font Complete](https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/DejaVuSansMono/Regular/complete/DejaVu%20Sans%20Mono%20Nerd%20Font%20Complete.ttf)
 - [ ] [DejaVu Sans Mono Nerd Font Complete Mono](https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/DejaVuSansMono/Regular/complete/DejaVu%20Sans%20Mono%20Nerd%20Font%20Complete%20Mono.ttf)
 - [ ] [DejaVu Sans Mono for Powerline](https://raw.githubusercontent.com/powerline/fonts/master/DejaVuSansMono/DejaVu%20Sans%20Mono%20for%20Powerline.ttf)
