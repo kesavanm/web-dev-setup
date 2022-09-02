@@ -8,6 +8,9 @@ Here we about to see how to connect various SQL tools (SQL clients) to servers a
 - Oracle
 - MS SQL
 
+**SSH Tunneling**
+Often we may need to tunnel via another server to access the rdbms service & this called as tunneling. Most modern clients offer SSH Tunneling out-of-the-box. 
+
 **1/2 - Command line tools**
 If you've GNU/Linux (or WSL) you can configure locally to access the externally hosted servers by installing lib & tools on the linux OS.
 
@@ -153,3 +156,33 @@ DBeaver|Yes|--|--|
 Oracle||Yes|--|
 MySQL WorkBench|Yes|--|--|
 Microsoft SQL Server Management Studio (SSMS) ||--|Yes|
+
+---
+
+**SSH Tunneling**
+SSH Tunneling requires the following pre-requestie (MySQL scenario):
+
+- Tunneling server's creds
+- MySQL service's creds
+- `ppk` file ( if applicable)
+
+
+##### PPK generation
+
+- Generate PPK from PEM - Use `PuTTY Key Generator` tool on `Windows`
+  - Load the PEM file. You may need the password to unlock the `pem` file
+  - Upon success, it'll populate the SSH Key & Fingerprint along with other info.
+  - `Save Private Key` to store the `ppk` file
+  ![PEM to PPK](./pem-to-ppk.PNG)
+
+- On `GNU/Linux` side, try `sudo puttygen pemKey.pem -o ppkKey.ppk -O private`
+
+##### Tunneling with Client
+
+- Use it on PuTTY or SSH Tunneling tools (Eg.: MySQL Clients)
+- Most modern tools offer SSH tunnel in their settings/options
+- In general, choose type as `SSH tunnel` ,`ss`
+- Refer below for `HeidiSQL` client
+![](./plink-sql-tunneling.png)
+
+
