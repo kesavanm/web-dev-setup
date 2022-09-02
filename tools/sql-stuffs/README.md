@@ -173,6 +173,7 @@ SSH Tunneling requires the following pre-requestie (MySQL scenario):
   - Load the PEM file. You may need the password to unlock the `pem` file
   - Upon success, it'll populate the SSH Key & Fingerprint along with other info.
   - `Save Private Key` to store the `ppk` file
+  
   ![PEM to PPK](./pem-to-ppk.PNG)
 
 - On `GNU/Linux` side, try `sudo puttygen pemKey.pem -o ppkKey.ppk -O private`
@@ -181,8 +182,9 @@ SSH Tunneling requires the following pre-requestie (MySQL scenario):
 
 - Use it on PuTTY or SSH Tunneling tools (Eg.: MySQL Clients)
 - Most modern tools offer SSH tunnel in their settings/options
-- In general, choose type as `SSH tunnel` ,`ss`
+- In general, choose type as `SSH tunnel` , `plink` as SSH tool and ensure `ppk` loaded as private key.
 - Refer below for `HeidiSQL` client
+  
 ![](./plink-sql-tunneling.png)
 
 
