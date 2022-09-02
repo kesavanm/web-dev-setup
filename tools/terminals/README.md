@@ -32,4 +32,4 @@
 |PuTTY| 	✓ | Opensource|	  Out of the Box
 |Git Bash|  ✓|  Opensource|  Easy  |
 |WSL terminal| 	✓| Comes with WSL| Out of the Box  |
-|Tabby| 	✓| Opensource|	 There's a lot! Be a Geeky |
+|Tabby(Terminus)| 	✓| Opensource|	 There's a lot!<br> Be a Geeky |
