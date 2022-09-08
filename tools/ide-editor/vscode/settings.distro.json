@@ -1,0 +1,138 @@
+{
+    // README
+    // MAKE SURE SYNC IS ON
+    // THIS CONFIG IS ACROSS DEVICES/PLATFORMS
+
+
+    // #0 - basic UI
+        "editor.fontFamily":  "JetBrains Mono",//"DejaVuSansMono Nerd Font Mono",
+        "editor.fontSize": 16,
+        "editor.fontLigatures": false,
+        "editor.minimap.enabled": true,
+        "workbench.iconTheme": "material-icon-theme",
+        "workbench.colorTheme": "Solarized Dark",
+        "material-icon-theme.activeIconPack": "angular_ngrx",
+        "window.zoomLevel": -1,        
+
+    // #1 - terminal
+        // `terminal.integrated.shell` - now deprecated.
+        // "terminal.integrated.shell.windows": "C:\\Users\\KMuthuvel\\tools\\PortableGit\\bin\\bash.exe",     
+        // "terminal.integrated.shell.windows": "cmd.exe",
+        // "terminal.integrated.shell.linux": "/usr/bin/bash",
+
+        // create set of terminal profiles and set one as default
+
+        "terminal.integrated.profiles.windows":{
+            "GitBash":{
+                "path":"C:\\Users\\KMuthuvel\\tools\\PortableGit\\bin\\bash.exe",
+                "icon": "terminal-bash"
+            }, 
+        },
+        "terminal.integrated.defaultProfile.windows": "GitBash",
+        // "terminal.integrated.defaultProfile.windows":"Ubuntu (WSL)",     # if you prefer WSL
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.fontSize": 15,
+        "terminal.integrated.fontFamily": "DroidSansMono NF", // "DroidSansMono Nerd Font Mono" //"Courier New",
+        "terminal.integrated.fontWeight": "normal", // dangerous ...
+
+    // #2 tweaks 
+        "security.workspace.trust.untrustedFiles": "open",
+        "editor.rulers": [
+        ],
+        "files.associations": {
+            "*.json": "jsonc"
+        },
+
+    // #3 - GIT configs
+        "git.autofetch": true,        
+
+    // #4 - PHP
+        "php.suggest.basic": false,
+        "php.validate.enable": false,
+        // "php.debug.executablePath": "C:\\Users\\kmuthuvel\\work\\de\\vscode-php.bat",
+        //"php.executablePath": "C:\\Users\\kmuthuvel\\work\\de\\vscode-php.bat",
+        // "php.executablePath": "/usr/bin/php",       //WSL's path
+
+    // #5 WSL 
+        "update.mode": "none",      // disable auto update on every loading from WSL
+
+    // #6 extension specific & misc
+
+    "gitlens.hovers.currentLine.over": "line",
+
+    "remote.SSH.remotePlatform": {
+        "opal4.opalstack.com": "linux",
+        "opal4.opalstacked.com": "linux"
+    },
+
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "local-passport",
+            "database": "passport",
+            "username": "username",
+            "password": "password"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "local-wsl",
+            "database": "admin",
+            "username": "username",
+            "password": "password"
+        }
+    ],
+
+    "emmet.excludeLanguages": [
+        "markdown",
+        "php"
+    ],
+    "ShortcutMenuBar.openSettings": true,
+    "ShortcutMenuBar.save": true,
+    "ShortcutMenuBar.userButton01Command": "workbench.action.zoomReset",
+    "ShortcutMenuBar.userButton02Command": "",
+    "ShortcutMenuBar.findReplace": true,
+    "ShortcutMenuBar.goToDefinition": true,
+    "ShortcutMenuBar.commentLine": true,
+
+    "intelephense.files.exclude":[
+        "**/.git/**",
+        "**/.svn/**",
+        "**/.hg/**",
+        "**/CVS/**",
+        "**/.DS_Store/**",
+        "**/node_modules/**",
+        "**/bower_components/**",
+        "**/vendor/**/{Tests,tests}/**",
+        "**/.history/**",
+        "**/vendor/**/vendor/**",
+
+        "**/app/**",                    // include files/symbolic-links to exclude when Goto declartion & Finding references 
+        "**/external/**",
+    ],
+    "todomd.defaultFile": "/home/user/bin/.todo_list2",
+    "markdown-preview-enhanced.previewTheme": "solarized-dark.css",
+}
+
+// Win10 - WSL - Ubuntu's PHP
+    // ****vscode-php.bat****
+    // This works for both ATOM/VSCode
+    // @echo off
+    // set v_params=%*
+    // set v_params=%v_params:\=/%
+    // set v_params=%v_params:c:=/mnt/c%
+    // set v_params=%v_params:"=\"%
+    // bash.exe -c "php %v_params%"
+
+    // server -> local

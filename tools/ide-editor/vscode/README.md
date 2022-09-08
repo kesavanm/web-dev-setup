@@ -5,10 +5,14 @@ Codium| Fully opensource editor. Entire source avail to public|
 VS Code| Microsoft branded opensource. May send your usage and other data to MS|
 Code Insider| Beta version of VS Code
 
+#### Sync settings ####
+
+Ensure you sync the settings using Github and Microsoft account so you can preserve your config across devices and platforms
+Refer the distributed sample [settings.json](settings.distro.json) from my local config.
 
 #### WSL support ####
 
-#### Sync settings ####
+WSL2 is recommended. May need to config the PHP and other lib path from WSL so that VSCode use them for syntax checking and basic processing. Refer how to use a `vscode-php.bat` from the appendix of [settings.json](settings.distro.json)
 
 #### Key extensions ####
 
@@ -72,5 +76,55 @@ MISC
     vscodevim.vim
 ```
 
-#### xDebugging ####
+## xDebugging ####
 
+This assumes you run the code from WSL2
+
+### **Client side**
+
+- [X]  Install & Enable the following extensions:
+    * [Remote - WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) ( Identifier: `ms-vscode-remote.remote-ws`)
+    * [PHP Debug | v1.27.0](https://marketplace.visualstudio.com/items?itemName=xdebug.php-debug)  (Identifier: `xdebug.php-debug`)
+
+- [X] Run the editor from WSL2
+
+    ```bash
+    which code      #  or which code-insiders - should return valid path from Windows Host - bin/code
+    cd ~/workspace 
+    code my-wow-project    # or code-insiders <repo>
+    ```
+- [X] Config extension
+```javascript
+     //.vscode/launch.json content
+    "configurations": [
+        {
+            "name": "Listen for Xdebug",
+            "type": "php",
+            "request": "launch",
+            "port": 9003,
+            "hostname": "de-web.local"
+        },
+```
+
+### **Server side**
+```bash
+# Update on /etc/php/7.4/mods-available/my-wow-project.ini
+
+#xdebug 3x
+[xdebug]
+xdebug.mode=debug
+xdebug.remote_enable=1
+xdebug.remote_autostart=1
+xdebug.start_with_request=yes
+xdebug.remote_port=9003
+xdebug.log = "/tmp/xdebug74.log"
+
+# Note - the following are excluded : xdebug.remote_host & xdebug.client_host
+```
+
+### **Browser (Example: Firefox)**
+1. Install extension - [xdebug-helper-for-firefox](https://addons.mozilla.org/en-US/firefox/addon/xdebug-helper-for-firefox/) and enable debugging
+1. Press F5 in the VSCODE after setting breakpoints on the source
+1. Load the page in browser. XDEBUG should trigger the breakpoints.
+
+![XDebug config using VSCode](misc/code-xdebug.png)
