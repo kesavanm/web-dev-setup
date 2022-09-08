@@ -44,7 +44,9 @@ PHP/xDebugging
     zobo.php-intellisense
 
 GIT
+    mhutchie.git-graph
     eamodio.gitlens
+    pomber.git-file-history
 
 RDBMS drivers(MySQL)
     cweijan.vscode-mysql-client2
