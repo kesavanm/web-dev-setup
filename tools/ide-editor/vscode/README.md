@@ -1,9 +1,10 @@
 #### Codium/VS Code/VSCode Insider
-Version| Quick Intro|
---|---|--|
-Codium| Fully opensource editor. Entire source avail to public|
-VS Code| Microsoft branded opensource. May send your usage and other data to MS|
-Code Insider| Beta version of VS Code
+
+|Version| Quick Intro|
+|--|---|
+|Codium| Fully opensource editor. Entire source avail to public|
+|VS Code| Microsoft branded opensource. May send your usage and other data to MS|
+|Code Insider| Beta version of VS Code|
 
 #### Sync settings ####
 

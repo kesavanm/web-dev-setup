@@ -55,6 +55,7 @@ In my view, an IDE / Editor should support:
 VS Code generally called as `vscode` is great editor from Microsoft and loved by most developers. Flavors:
   - Codium  - The vanilla flavor of original editor
   - VSCode -  Additional essence added and marketed by Microsoft
+More on [VS code](tools/ide-editor/vscode/README.md)
 
 
 #### Atom
@@ -67,3 +68,10 @@ More on [ATOM](tools/ide-editor/atom)
 
 
 #### PHPStorm
+
+
+
+### SQL clients
+SQL clients help you to get connected with RDBMS service. Most common are MySQL/Oracle & MS-SQL. This section covers on how to connect/manage the service
+
+More on [SQL clients](tools/sql-stuffs/README.md )
