@@ -12,6 +12,7 @@ This repo also covers tips to config WSL, Docker & so.
 - [Terminal tweaks](#terminals)
 - IDE / Editor
 - SQL clients
+- Debugger
 
 
 ### Basic
@@ -66,7 +67,6 @@ ATOM is another great editor and favorite of most developers. This great `hackab
 More on [ATOM](tools/ide-editor/atom)
 
 
-
 #### PHPStorm
 
 
@@ -75,3 +75,7 @@ More on [ATOM](tools/ide-editor/atom)
 SQL clients help you to get connected with RDBMS service. Most common are MySQL/Oracle & MS-SQL. This section covers on how to connect/manage the service
 
 More on [SQL clients](tools/sql-stuffs/README.md )
+
+
+### Debugging with xDebug tool
+xDebug tool is the one for PHP apps. And this tool is supported by all the IDEs. Configuration for VSCode is described on [xDebugging](tools/ide-editor/vscode/README.md#xDebugging)

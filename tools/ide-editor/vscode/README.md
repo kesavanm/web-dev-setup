@@ -77,21 +77,37 @@ MISC
     vscodevim.vim
 ```
 
-## xDebugging ####
-
+## **xDebugging** ##
 This assumes you run the code from WSL2
+
+### **Server side**
+
+- [X]  Update `#/etc/php/7.4/mods-available/my-wow-project.ini` or similar
+  ```bash
+    #xdebug 3x
+    [xdebug]
+    xdebug.mode=debug
+    xdebug.remote_enable=1
+    xdebug.remote_autostart=1
+    xdebug.start_with_request=yes
+    xdebug.remote_port=9003
+    xdebug.log = "/tmp/xdebug74.log"
+    # Note - the following are excluded : xdebug.remote_host & xdebug.client_host
+  ```
+- [X] Restart the web server : `sudo service apache2  restart`
+- [X] Check with `phpinfo();` to see the above changes reflected!
 
 ### **Client side**
 
 - [X]  Install & Enable the following extensions:
-    * [Remote - WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) ( Identifier: `ms-vscode-remote.remote-ws`)
-    * [PHP Debug | v1.27.0](https://marketplace.visualstudio.com/items?itemName=xdebug.php-debug)  (Identifier: `xdebug.php-debug`)
+  * [Remote - WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) ( Identifier: `ms-vscode-remote.remote-ws`)
+  * [PHP Debug | v1.27.0](https://marketplace.visualstudio.com/items?itemName=xdebug.php-debug)  (Identifier: `xdebug.php-debug`)
 
 - [X] Run the editor from WSL2
 
     ```bash
     which code      #  or which code-insiders - should return valid path from Windows Host - bin/code
-    cd ~/workspace 
+    cd ~/workspace
     code my-wow-project    # or code-insiders <repo>
     ```
 - [X] Config extension
@@ -107,25 +123,9 @@ This assumes you run the code from WSL2
         },
 ```
 
-### **Server side**
-```bash
-# Update on /etc/php/7.4/mods-available/my-wow-project.ini
-
-#xdebug 3x
-[xdebug]
-xdebug.mode=debug
-xdebug.remote_enable=1
-xdebug.remote_autostart=1
-xdebug.start_with_request=yes
-xdebug.remote_port=9003
-xdebug.log = "/tmp/xdebug74.log"
-
-# Note - the following are excluded : xdebug.remote_host & xdebug.client_host
-```
-
 ### **Browser (Example: Firefox)**
 1. Install extension - [xdebug-helper-for-firefox](https://addons.mozilla.org/en-US/firefox/addon/xdebug-helper-for-firefox/) and enable debugging
 1. Press F5 in the VSCODE after setting breakpoints on the source
 1. Load the page in browser. XDEBUG should trigger the breakpoints.
 
-![XDebug config using VSCode](misc/code-xdebug.png)
+![XDebug config using VSCode](code-xdebug.png)
