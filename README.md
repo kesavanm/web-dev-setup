@@ -68,8 +68,10 @@ More on [ATOM](tools/ide-editor/atom)
 
 
 #### PHPStorm
+All-in-all solution for PHP Web IDE development. One stop shop for professional web development using PHP & related technologies. 
 
 
+More on [PHPStorm](tools/ide-editor/phpstorm/) 
 
 ### SQL clients
 SQL clients help you to get connected with RDBMS service. Most common are MySQL/Oracle & MS-SQL. This section covers on how to connect/manage the service
