@@ -78,4 +78,4 @@ More on [SQL clients](tools/sql-stuffs/README.md )
 
 
 ### Debugging with xDebug tool
-xDebug tool is the one for PHP apps. And this tool is supported by all the IDEs. Configuration for VSCode is described on [xDebugging](tools/ide-editor/vscode/README.md#xDebugging)
+xDebug tool is the one for PHP apps. And this tool is supported by all the IDEs. Configuration for VSCode & PHPStorm is described on [xDebugging](tools/ide-editor/vscode/README.md#xDebugging) and [PHPStorm](tools/ide-editor/phpstorm/README.md)
