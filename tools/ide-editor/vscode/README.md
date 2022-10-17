@@ -119,7 +119,13 @@ This assumes you run the code from WSL2
             "type": "php",
             "request": "launch",
             "port": 9003,
-            "hostname": "de-web.local"
+            "hostname": "de-web.local",     // 0.0.0.0:9090,:::9090 works as well, check VPN
+
+            // Only for REMOTE DEVELOPMENT (Ex: Windows-WSL, Windows-SSH-server )
+            "pathMappings": {               // When `vscode` runs on same server, 
+                // remote => local          // this config not required
+                "/home/kesavan/workspace/tigger/": "${workspaceRoot}/",
+            },               
         },
 ```
 
@@ -129,3 +135,56 @@ This assumes you run the code from WSL2
 1. Load the page in browser. XDEBUG should trigger the breakpoints.
 
 ![XDebug config using VSCode](code-xdebug.png)
+
+
+
+####xDebugging - Troubleshooting tips
+
+__On Client side (Example:Windows)__
+
+- In case of remote debugging, identify the right client IP & use in `xdebug.ini` or similar apache config. Refer [find the right IP](../../ide-editor/phpstorm/README.md#find-the-right-ip )
+  
+    ![WSL IP from Windows](../../ide-editor/phpstorm/wsl2-ip.png)
+
+If the setup is local, (ie WSL-Windows) validate by executing the following: (on REMOTE side)
+
+```shell
+$netstat -rn | grep "^0.0.0.0 " | cut -d " " -f10
+172.22.192.1
+```
+
+
+- On client side, check the `PORT` health with `Admin` rights (`CMD` or `GitBash`)
+
+
+```shell
+# Before connection - LISTENING mode
+$ netstat -naob|head -4; netstat -naob | grep -A1 9090
+
+Active Connections
+
+  Proto  Local Address          Foreign Address        State           PID
+  TCP    172.22.192.1:9090      0.0.0.0:0              LISTENING       37288
+ [Code.exe]
+```
+
+```shell
+# During connection - ESTABLISHED mode
+$ netstat -naob|head -4; netstat -naob | grep -A1 9090
+
+Active Connections
+
+  Proto  Local Address          Foreign Address        State           PID
+  TCP    172.22.192.1:9090      0.0.0.0:0              LISTENING       37288
+ [Code.exe]
+  TCP    172.22.192.1:9090      172.22.196.90:60614    ESTABLISHED     37288
+ [Code.exe]
+```
+
+
+__On REMOTE server (Example:Gnu/Linux)__
+
+```shell
+$netstat -an | grep 9090
+tcp        0      0 172.22.196.90:60614     172.22.192.1:9090       ESTABLISHED
+```
