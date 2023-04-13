@@ -39,8 +39,10 @@ Make sure the `/etc/hosts` on WSL2 (REMOTE) as well as `C:\Windows\System32\driv
 #### Browser tweak
 Install `Xdebug helper` on (Mozilla based) Firefox and enable the `Debug`. Incase of other browsers , try with similar plugins or bookmarklets
 
+#### Network connectivity 
+In case of issue still with XDebug connectivity, ==disconnect VPN==
 #### Happy debugging
-If need watch and monitor the debug file  `xdebug.log = "/tmp/xdebug74.log"` as mentioned on [Apache config](#apache-config) section above! 
+If need, watch and monitor the debug file  `xdebug.log = "/tmp/xdebug74.log"` as mentioned on [Apache config](#apache-config) section above! 
 ![xdebug.log](./xdebug-log.png)
 
 
