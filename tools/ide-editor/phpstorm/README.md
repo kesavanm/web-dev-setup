@@ -41,7 +41,7 @@ Install `Xdebug helper` on (Mozilla based) Firefox and enable the `Debug`. Incas
 
 #### Network connectivity
 - Always make sure Internet/network available to server where apache runs (WSL2)
-- In case of issue still with XDebug connectivity, ==disconnect VPN==
+- In case of issue still with XDebug connectivity, **disconnect VPN**
 #### Happy debugging
 If need, watch and monitor the debug file  `xdebug.log = "/tmp/xdebug74.log"` as mentioned on [Apache config](#apache-config) section above! 
 ![xdebug.log](./xdebug-log.png)
