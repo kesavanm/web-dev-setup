@@ -39,11 +39,19 @@ Make sure the `/etc/hosts` on WSL2 (REMOTE) as well as `C:\Windows\System32\driv
 #### Browser tweak
 Install `Xdebug helper` on (Mozilla based) Firefox and enable the `Debug`. Incase of other browsers , try with similar plugins or bookmarklets
 
-#### Network connectivity 
-In case of issue still with XDebug connectivity, ==disconnect VPN==
+#### Network connectivity
+- Always make sure Internet/network available to server where apache runs (WSL2)
+- In case of issue still with XDebug connectivity, ==disconnect VPN==
 #### Happy debugging
 If need, watch and monitor the debug file  `xdebug.log = "/tmp/xdebug74.log"` as mentioned on [Apache config](#apache-config) section above! 
 ![xdebug.log](./xdebug-log.png)
 
 
 Look out for the incoming connection on the IDE & Happy Debugging!
+
+### Debugging inside VPN
+- Use the `IPv4 Address` from VPN connection using `ipconfig` on Windows
+- Update that above IP across the `hosts` on both Windows/WSL2
+- Also update the IP on both `ini` and ensure it's in PHPStorm
+- You may need `service apache2 restart` & IDE restart
+- Wait for a 5-10 minutes, so the network changes will reflect in WSL2 env
