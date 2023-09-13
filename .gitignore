@@ -1,0 +1,17 @@
+# PhpStorm Config
+/.idea
+/.git.*
+
+# System-generated files
+**/*\?*
+*~
+*#
+
+# Logs
+*.log
+log-*.php
+
+# Archives
+*.zip
+*.rar
+

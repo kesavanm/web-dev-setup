@@ -50,8 +50,9 @@ If need, watch and monitor the debug file  `xdebug.log = "/tmp/xdebug74.log"` as
 Look out for the incoming connection on the IDE & Happy Debugging!
 
 ### Debugging inside VPN
-- Use the `IPv4 Address` from VPN connection using `ipconfig` on Windows
-- Update that above IP across the `hosts` on both Windows/WSL2
+- Use the `IPv4 Address` from **VPN connection** using `ipconfig` on Windows
+   *Please note: This is not the WSL's IP* ![](./wsl2-ip-vpn.png)
+- Map that above IP to `localhost` across the `hosts` on both Windows/WSL2
 - Also update the IP on both `ini` and ensure it's in PHPStorm
 - You may need `service apache2 restart` & IDE restart
 - Wait for a 5-10 minutes, so the network changes will reflect in WSL2 env
