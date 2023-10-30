@@ -6,16 +6,16 @@
 |VS Code| Microsoft branded opensource. May send your usage and other data to MS|
 |Code Insider| Beta version of VS Code|
 
-#### Sync settings ####
+#### Sync settings
 
 Ensure you sync the settings using Github and Microsoft account so you can preserve your config across devices and platforms
 Refer the distributed sample [settings.json](settings.distro.json) from my local config.
 
-#### WSL support ####
+#### WSL support
 
 WSL2 is recommended. May need to config the PHP and other lib path from WSL so that VSCode use them for syntax checking and basic processing. Refer how to use a `vscode-php.bat` from the appendix of [settings.json](settings.distro.json)
 
-#### Key extensions ####
+#### Key extensions
 
 Here goes my list of installed extensions. Not in any order, just alphabetical.
 
@@ -77,7 +77,7 @@ MISC
     vscodevim.vim
 ```
 
-## **xDebugging** ##
+## **xDebugging**
 This assumes you run the code from WSL2
 
 ### **Server side**
@@ -138,7 +138,7 @@ This assumes you run the code from WSL2
 
 
 
-####xDebugging - Troubleshooting tips
+#### xDebugging - Troubleshooting tips
 
 __On Client side (Example:Windows)__
 
@@ -188,3 +188,17 @@ __On REMOTE server (Example:Gnu/Linux)__
 $netstat -an | grep 9090
 tcp        0      0 172.22.196.90:60614     172.22.192.1:9090       ESTABLISHED
 ```
+
+---
+
+
+#### Extensions - Troubleshooting tips
+
+*Remember, every product has it's own defects. Some people love to call them as features.*
+
+* Always look for logs/console info. `Help | Toggle Developer Tools`
+
+Issue / Challenge | Possible cause & Potential fix
+--|--
+Extensions failed to download; <br> Not able to connect to internet. <br> Getting HTTP status code: `407` | Proxy settings may be wrong. Search in Settings ( `CTRL+,` )   <br>Fix proxy setting at User, Remote(if required), Workspace levels
+Certificate expired |Uncheck `Proxy Strict SSL` and related config at User level
