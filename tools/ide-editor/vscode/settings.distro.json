@@ -5,14 +5,25 @@
 
 
     // #0 - basic UI
-        "editor.fontFamily":  "JetBrains Mono",//"DejaVuSansMono Nerd Font Mono",
-        "editor.fontSize": 16,
-        "editor.fontLigatures": false,
+        "editor.fontFamily": "'JetBrainsMonoRoman-Light', Consolas, 'Courier New', monospace", //"JetBrains Mono",
+        "editor.fontSize": 14,
+        "editor.fontLigatures": true,
+        "editor.letterSpacing": 0.1,
+        "editor.smoothScrolling": true,
         "editor.minimap.enabled": true,
-        "workbench.iconTheme": "material-icon-theme",
         "workbench.colorTheme": "Solarized Dark",
-        "material-icon-theme.activeIconPack": "angular_ngrx",
-        "window.zoomLevel": -1,        
+        "editor.mouseWheelZoom": true,
+        "editor.indentSize": "tabSize",
+        "editor.codeActionsOnSave": {
+        },    
+        "markdown.preview.fontFamily":"'JetBrains Mono', Consolas, 'Courier New', monospace", 
+        "window.zoomLevel": 0,      // thank me later, CTRL+scroll >> Zooom-inn
+        "json.schemas": [],
+        "git.suggestSmartCommit": false,
+        "workbench.iconTheme": "vs-minimal",
+        // "material-icon-theme.activeIconPack": "angular_ngrx",
+        // "markdown.preview.fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
+        //  "editor.fontWeight": "bold", // Font Weight
 
     // #1 - terminal
         // `terminal.integrated.shell` - now deprecated.
@@ -21,7 +32,9 @@
         // "terminal.integrated.shell.linux": "/usr/bin/bash",
 
         // create set of terminal profiles and set one as default
-
+        "terminal.integrated.fontFamily": "DroidSansM Nerd Font Mono",
+        "terminal.integrated.mouseWheelZoom": true,
+        "terminal.integrated.fontWeight": "normal", // dangerous ...        
         "terminal.integrated.profiles.windows":{
             "GitBash":{
                 "path":"C:\\Users\\KMuthuvel\\tools\\PortableGit\\bin\\bash.exe",
@@ -31,38 +44,40 @@
         "terminal.integrated.defaultProfile.windows": "GitBash",
         // "terminal.integrated.defaultProfile.windows":"Ubuntu (WSL)",     # if you prefer WSL
         "terminal.integrated.defaultProfile.linux": "bash",
-        "terminal.integrated.fontSize": 15,
-        "terminal.integrated.fontFamily": "DroidSansMono NF", // "DroidSansMono Nerd Font Mono" //"Courier New",
-        "terminal.integrated.fontWeight": "normal", // dangerous ...
+        "terminal.integrated.scrollback": 1000,
 
     // #2 tweaks 
         "security.workspace.trust.untrustedFiles": "open",
         "editor.rulers": [
         ],
         "files.associations": {
-            "*.json": "jsonc"
+            "*.json": "jsonc",
+            "*.open": "shellscript"
         },
 
     // #3 - GIT configs
-        "git.autofetch": true,        
+        "git.autofetch": true,
+        "git.path": "C:\\Users\\KMuthuvel\\tools\\PortableGit\\bin\\git.exe",
+        
 
     // #4 - PHP
         "php.suggest.basic": false,
         "php.validate.enable": false,
-        // "php.debug.executablePath": "C:\\Users\\kmuthuvel\\work\\de\\vscode-php.bat",
-        //"php.executablePath": "C:\\Users\\kmuthuvel\\work\\de\\vscode-php.bat",
+        // "php.debug.executablePath": "C:\\Users\\xxx\\work\\vscode-php.bat",
+        //"php.executablePath": "C:\\Users\\xxx\\work\\vscode-php.bat",
         // "php.executablePath": "/usr/bin/php",       //WSL's path
 
     // #5 WSL 
         "update.mode": "none",      // disable auto update on every loading from WSL
 
     // #6 extension specific & misc
-
+   
     "gitlens.hovers.currentLine.over": "line",
 
     "remote.SSH.remotePlatform": {
-        "opal4.opalstack.com": "linux",
-        "opal4.opalstacked.com": "linux"
+        "remote.internet.com": "linux",
+        "aws.internet.com": "linux",
+        "oci.internet.com": "linux"
     },
 
     "sqltools.connections": [
@@ -121,8 +136,68 @@
         "**/app/**",                    // include files/symbolic-links to exclude when Goto declartion & Finding references 
         "**/external/**",
     ],
-    "todomd.defaultFile": "/home/user/bin/.todo_list2",
     "markdown-preview-enhanced.previewTheme": "solarized-dark.css",
+    "editor.unicodeHighlight.allowedCharacters": {
+        "இ": true
+    },
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "git.ignoreLegacyWarning": true,
+    "markdown-preview-enhanced.scrollSync": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "[php]": {
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+    },
+    "codeium.detectProxy": false,
+    "http.proxyStrictSSL": false,
+    "http.proxySupport": "off",
+    "codeium.enableConfig": {
+        "*": false,
+        "markdown": true
+    },
+    "markdown-preview-enhanced.codeBlockTheme": "solarized-dark.css",
+    "editor.inlineSuggest.showToolbar": "onHover",
+    "editor.stickyScroll.enabled": true,
+    "back-n-forth.withLastEditLocation": true,
+    "ShortcutMenuBar.copy": true,
+    "ShortcutMenuBar.openFile": true,
+    "ShortcutMenuBar.newFile": true,
+    "ShortcutMenuBar.redo": true,
+    "ShortcutMenuBar.paste": true,
+    "ShortcutMenuBar.saveAll": true,
+    "ShortcutMenuBar.toggleWordWrap": true,
+    "ShortcutMenuBar.undo": true,
+    "ShortcutMenuBar.toggleActivityBar": true,
+    "window.customTitleBarVisibility": "auto",
+    "window.menuBarVisibility": "toggle",
+    "todomd.decorations": {
+        "project": {},
+        "context": {},
+        "tag": {},
+        "comment": {},
+        "notDue": {},
+        "due": {},
+        "overdue": {},
+        "invalidDue": {},
+        "favorite": {},
+        "priorityA": {},
+        "priorityB": {},
+        "priorityC": {},
+        "priorityD": {},
+        "priorityE": {},
+        "priorityF": {},
+        "completedTask": {}
+    },
+    "todomd.defaultFile": "C:\\Users\\kmuth446\\xxx\\misc\\.todo_list2",
+    "todomd.defaultSomedayFile": "C:\\Users\\kmuth446\\xxx\\misc\\.todo_listx",
+    "todomd.defaultArchiveFile": "C:\\Users\\kmuth446\\xxx\\misc\\.todo_list.ar",
+
+    "bitoAI.codeCompletion.enableAutoCompletion": true,
+    "bitoAI.codeCompletion.enableCommentToCode": true,
+
+    
+    
+
 }
 
 // Win10 - WSL - Ubuntu's PHP
