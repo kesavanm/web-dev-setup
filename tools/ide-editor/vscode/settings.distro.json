@@ -4,23 +4,26 @@
     // THIS CONFIG IS ACROSS DEVICES/PLATFORMS
 
 
-    // #0 - basic UI
-        "editor.fontFamily": "'JetBrainsMonoRoman-Light', Consolas, 'Courier New', monospace", //"JetBrains Mono",
+    // #0 - basic 101
+        // "editor.fontFamily": "'JetBrainsMonoRoman-Light', Consolas, 'Courier New', monospace", //"JetBrains Mono",  // Win
+        // "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace",                                          // Gnu
+        "editor.fontFamily": "'Droid Sans Mono', 'monospace', 'monospace'",                                          // Gnu & Win
         "editor.fontSize": 14,
         "editor.fontLigatures": true,
         "editor.letterSpacing": 0.1,
         "editor.smoothScrolling": true,
         "editor.minimap.enabled": true,
-        "workbench.colorTheme": "Solarized Dark",
         "editor.mouseWheelZoom": true,
         "editor.indentSize": "tabSize",
         "editor.codeActionsOnSave": {
+
         },    
         "markdown.preview.fontFamily":"'JetBrains Mono', Consolas, 'Courier New', monospace", 
         "window.zoomLevel": 0,      // thank me later, CTRL+scroll >> Zooom-inn
         "json.schemas": [],
         "git.suggestSmartCommit": false,
         "workbench.iconTheme": "vs-minimal",
+        "workbench.colorTheme": "Solarized Dark", // "Solarized Dark","One Dark Pro Mix",
         // "material-icon-theme.activeIconPack": "angular_ngrx",
         // "markdown.preview.fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
         //  "editor.fontWeight": "bold", // Font Weight
@@ -58,7 +61,6 @@
     // #3 - GIT configs
         "git.autofetch": true,
         "git.path": "C:\\Users\\KMuthuvel\\tools\\PortableGit\\bin\\git.exe",
-        
 
     // #4 - PHP
         "php.suggest.basic": false,
@@ -79,6 +81,8 @@
         "aws.internet.com": "linux",
         "oci.internet.com": "linux"
     },
+
+    "remote.SSH.useLocalServer": false,
 
     "sqltools.connections": [
         {
@@ -104,6 +108,19 @@
             "driver": "MySQL",
             "name": "local-wsl",
             "database": "admin",
+            "username": "username",
+            "password": "password"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "database-replica.us-east-1.rds.amazonaws.com",
+            "port": 3306,
+            "driver": "MariaDB",
+            "name": "rep-db",
+            "database": "sakila",
             "username": "username",
             "password": "password"
         }
@@ -169,7 +186,8 @@
     "ShortcutMenuBar.undo": true,
     "ShortcutMenuBar.toggleActivityBar": true,
     "window.customTitleBarVisibility": "auto",
-    "window.menuBarVisibility": "toggle",
+    // "window.menuBarVisibility": "toggle",
+    "window.menuBarVisibility": "compact",
     "todomd.decorations": {
         "project": {},
         "context": {},
@@ -194,10 +212,12 @@
 
     "bitoAI.codeCompletion.enableAutoCompletion": true,
     "bitoAI.codeCompletion.enableCommentToCode": true,
-
+    "settingsSync.ignoredExtensions": [
+        // "codeium.codeium"
+    ],
+    "typescript.inlayHints.enumMemberValues.enabled": true,
     
     
-
 }
 
 // Win10 - WSL - Ubuntu's PHP
