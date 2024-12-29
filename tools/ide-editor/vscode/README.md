@@ -75,6 +75,12 @@ MISC
     hyunkyunmoon.gzipdecompressor
     ms-vscode.test-adapter-converter
     vscodevim.vim
+
+AI friends
+    codeium.codeium
+    github.copilot
+    bito.bito
+    tabnine.tabnine-vscode
 ```
 
 ## **xDebugging**
